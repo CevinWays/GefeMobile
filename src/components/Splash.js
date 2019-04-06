@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     buttonNext:{
-        marginTop: 100,
-    }
+        marginTop: 150,
+    },
   });
