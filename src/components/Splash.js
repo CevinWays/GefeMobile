@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native'
-import {Button} from 'react-native';
-import { black } from 'ansi-colors';
+import {Button, View, Text, Image, StyleSheet} from 'react-native'
 
 class Splash extends Component {
+    static navigationOptions = {
+        header : null
+    };
     render(){
         return(
-            <View style={styles.mainbody} >
+            <View style={styles.container} >
                 <Image style={styles.imgsplash} source={require('../assets/splash1.png')}></Image>
                 <Text style={styles.titleFont}>Welcome To Gefe</Text>
                 <Text style={styles.titleText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor</Text>
                 <View style={styles.buttonNext}>
-                    <Button title="Next" color="#6C63FF"></Button>
+                    <Button title="Next" color="#6C63FF" 
+                    onPress={() => this.props.navigation.navigate('Login')}></Button>
                 </View>
             </View>
         )
@@ -22,7 +24,7 @@ class Splash extends Component {
 export default Splash;
 
 const styles = StyleSheet.create({
-    mainbody: {
+    container: {
       marginTop: 30,
       marginLeft: 24,
       marginRight: 24,
