@@ -1,74 +1,78 @@
 import React, {Component} from 'react';
 import {Button,Image, View, Text, StyleSheet} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler';
-import { createDrawerNavigator, createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 
 import Users from './Users';
 import Vehicles from './Vehicles';
 import Home from './Home';
+import MyAccount from './MyAccount';
 
-class Dashboard extends Component {
+export default class Dashboard extends Component {
     static navigationOptions = {
-        title : 'GEFE',
-        headerLeft : null,
+        header: null,
     };
-    render(){
-        return(
-            <MyApp />
-        )
+    render() {
+      return (
+        <AppContainer/>
+      );
     }
-}
+  }
 
-const MyDrawerNavigator = createDrawerNavigator({
-    Home: {
-      screen: Home,
+const TabScreens = createBottomTabNavigator({
+    Home:{
+        screen: Home,
+        navigationOptions:{
+            tabBarLabel:'Home',
+            tabBarIcon: ({tintColor}) => (
+                <Image source={require('../assets/home.png')}
+                style={{width:24,height:24, tintColor: tintColor}} />
+            )
+        }
     },
-    Users: {
-      screen: Users,
+    Users:{
+        screen: Users,
+        navigationOptions:{
+            tabBarLabel:'Users',
+            tabBarIcon: ({tintColor}) => (
+                <Image source={require('../assets/users.png')}
+                style={{width:24,height:24, tintColor: tintColor}} />
+            )
+        }
     },
-    Vehicles: {
-      screen: Vehicles,
+    Vehicles:{
+        screen: Vehicles,
+        navigationOptions:{
+            tabBarLabel:'Vehicle',
+            tabBarIcon: ({tintColor}) => (
+                <Image source={require('../assets/vehicles.png')}
+                style={{width:24,height:24, tintColor: tintColor}} />
+            )
+        }
     },
-});
-const MyApp = createAppContainer(MyDrawerNavigator);
-
-export default Dashboard;
-
-const styles = StyleSheet.create({
-    container:{
-        marginTop: 30,
-        marginLeft: 24,
-        marginRight: 24,
-        marginBottom: 70
+    Account:{
+        screen: MyAccount,
+        navigationOptions:{
+            tabBarLabel:'Account',
+            tabBarIcon: ({tintColor}) => (
+                <Image source={require('../assets/account.png')}
+                style={{width:24,height:24, tintColor: tintColor}} />
+            )
+        }
     },
-    imgsplash: {
-        width: 300,
-        height: 250,
-        marginTop: 10,
-    },
-    titleFont:{
-        color: 'black',
-        fontWeight: 'bold',
-        fontSize: 28,
-        textAlign: 'center',
-    },
-    titleText:{
-        fontSize: 14,
-        textAlign: 'center',
-    },
-    buttonLogin:{
-        fontSize: 14,
-        textAlign: 'center',
-        marginTop: 50,
-    },
-    buttonNext:{
-        marginTop: 150,
-    },
-    inputUser: {
-        marginBottom:8,
-        height: 45,
-        borderColor: "#E0E0E0",
-        backgroundColor: "#FAFAFA",
-        borderRadius: 8,
+},{
+    tabBarOptions:{
+        activeTintColor:'#6C63FF',
+        labelStyle: {
+            fontSize: 12,
+            marginBottom:10,
+            fontWeight:"bold",
+        },
+        style:{
+            elevation:5,
+            height:60
+        }
     }
-});
+})
+
+const AppContainer = createAppContainer(TabScreens);

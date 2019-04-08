@@ -2,11 +2,7 @@ import React, {Component} from 'react';
 import {Button,Image, View, Text, StyleSheet} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler';
 
-
 class Home extends Component {
-    static navigationOptions = {
-        title: 'Home',
-    };
     render(){
         return(
             <View style={styles.container}>

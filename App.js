@@ -13,9 +13,6 @@ import Splash from './src/components/Splash';
 import Login from './src/components/Login';
 import Register from './src/components/Register';
 import Dashboard from './src/components/Dashboard';
-import Users from './src/components/Users';
-import Vehicles from './src/components/Vehicles';
-import Home from './src/components/Home';
 
 export default class App extends Component {
   render() {
@@ -30,9 +27,6 @@ const AppStackNavigator = createStackNavigator({
   Login : Login,
   Register : Register,
   Dashboard : Dashboard,
-  Users : Users,
-  Vehicles : Vehicles,
-  Home : Home,
 },
 {
   initialRouteName: 'Splash',

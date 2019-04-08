@@ -4,9 +4,6 @@ import { TextInput } from 'react-native-gesture-handler';
 
 
 class Users extends Component {
-    static navigationOptions = {
-        title: 'Users',
-    };
     render(){
         return(
             <View style={styles.container}>

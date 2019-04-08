@@ -3,17 +3,17 @@ import {Button,Image, View, Text, StyleSheet} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler';
 
 
-class Vehicles extends Component {
+class MyAccount extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.titleFont}>Vehicles Screen</Text>
+                <Text style={styles.titleFont}>MyAccount Screen</Text>
             </View>
         )
     }
 }
 
-export default Vehicles;
+export default MyAccount;
 
 const styles = StyleSheet.create({
     container:{
