@@ -6,8 +6,19 @@ import { TextInput } from 'react-native-gesture-handler';
 class MyAccount extends Component {
     render(){
         return(
-            <View style={styles.container}>
-                <Text style={styles.titleFont}>MyAccount Screen</Text>
+            <View style={styles.mainBody}>
+                <View style={styles.container}>
+                    <View>
+                        <Text style={styles.titleFont}>MyAccount</Text>
+                    </View>
+                    <View style={styles.containerRow}>
+                        <Image style={styles.imgStyle} source={require('../assets/userImage.jpg')}/>
+                        <View style={styles.container}>
+                            <Text style={styles.titleUsername}>Cevin Ways</Text>
+                            <Text style={styles.titleUserjob}>Developer / Mahasiswa</Text>
+                        </View>
+                    </View>
+                </View>
             </View>
         )
     }
@@ -16,22 +27,27 @@ class MyAccount extends Component {
 export default MyAccount;
 
 const styles = StyleSheet.create({
-    container:{
-        marginTop: 30,
-        marginLeft: 24,
-        marginRight: 24,
-        marginBottom: 70
+    mainBody:{
+        marginTop:20,
     },
-    imgsplash: {
-        width: 300,
-        height: 250,
-        marginTop: 10,
+    container:{
+        flexDirection: 'column'
+    },
+    containerRow:{
+        flexDirection: 'row',
+        marginStart:16
+    },
+    imgStyle: {
+        width: 85,
+        height: 85,
+        marginTop: 20,
+        borderRadius:60,
     },
     titleFont:{
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 28,
-        textAlign: 'center',
+        fontSize: 24,
+        marginStart: 16,
     },
     titleText:{
         fontSize: 14,
@@ -51,5 +67,17 @@ const styles = StyleSheet.create({
         borderColor: "#E0E0E0",
         backgroundColor: "#FAFAFA",
         borderRadius: 8,
+    },
+    titleUsername:{
+        fontSize: 18,
+        fontWeight:'bold',
+        marginTop:20,
+        marginStart:16
+    },
+    titleUserjob:{
+        fontSize: 14,
+        fontWeight:'bold',
+        marginTop:8,
+        marginStart:16
     }
 });

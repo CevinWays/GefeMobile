@@ -1,14 +1,33 @@
 import React, {Component} from 'react';
-import {Button,Image, View, Text, StyleSheet} from 'react-native'
-import { TextInput } from 'react-native-gesture-handler';
+import {View, StyleSheet} from 'react-native'
+import { Container, Header, Content, List, ListItem, Text} from 'native-base';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 class Users extends Component {
     render(){
         return(
-            <View style={styles.container}>
-                <Text style={styles.titleFont}>Users Screen</Text>
-            </View>
+            <ScrollView style={styles.container}>
+                <Text style={styles.titleFont}>List of Users</Text>
+                <Container style={styles.container}>
+                    <Content>
+                        <List>
+                            <ListItem noIndent style={{ backgroundColor: "#C9C7FF" }}>
+                                <Text>Cevin</Text>
+                            </ListItem>
+                            <ListItem>
+                                <Text>Fariha</Text>
+                            </ListItem>
+                            <ListItem>
+                                <Text>Anita</Text>
+                            </ListItem>
+                            <ListItem>
+                                <Text>Bekti</Text>
+                            </ListItem>
+                        </List>
+                    </Content>
+                </Container>
+            </ScrollView>
         )
     }
 }
@@ -17,10 +36,8 @@ export default Users;
 
 const styles = StyleSheet.create({
     container:{
-        marginTop: 30,
-        marginLeft: 24,
-        marginRight: 24,
-        marginBottom: 70
+        flex:1,
+        marginTop: 20,
     },
     imgsplash: {
         width: 300,
@@ -30,8 +47,8 @@ const styles = StyleSheet.create({
     titleFont:{
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 28,
-        textAlign: 'center',
+        fontSize: 24,
+        marginStart: 16,
     },
     titleText:{
         fontSize: 14,

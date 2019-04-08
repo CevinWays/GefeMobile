@@ -6,7 +6,7 @@ class Home extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.titleFont}>Home Screen</Text>
+                <Text style={styles.titleFont}>Home</Text>
             </View>
         )
     }
@@ -16,10 +16,8 @@ export default Home;
 
 const styles = StyleSheet.create({
     container:{
-        marginTop: 30,
-        marginLeft: 24,
-        marginRight: 24,
-        marginBottom: 70
+        flex:1,
+        marginTop: 20,
     },
     imgsplash: {
         width: 300,
@@ -29,8 +27,8 @@ const styles = StyleSheet.create({
     titleFont:{
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 28,
-        textAlign: 'center',
+        fontSize: 24,
+        marginStart: 16,
     },
     titleText:{
         fontSize: 14,
