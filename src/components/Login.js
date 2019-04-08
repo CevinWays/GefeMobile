@@ -13,7 +13,7 @@ class Login extends Component {
                 <Image style={styles.imgsplash} source={require('../assets/login.png')}></Image>
                 <TextInput style={styles.inputUser}>Username</TextInput>
                 <TextInput style={styles.inputUser}>Password</TextInput>
-                <Button title="Login" color="#6C63FF"></Button>
+                <Button onPress={() => this.props.navigation.navigate('Dashboard')} title="Login" color="#6C63FF"></Button>
                 <Text style={styles.buttonRegister} onPress={() => this.props.navigation.navigate('Register')}>Don't have an account? Register</Text>
             </View>
         )

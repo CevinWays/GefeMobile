@@ -1,28 +1,38 @@
 import React, {Component} from 'react';
 import {Button,Image, View, Text, StyleSheet} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
+import Users from './Users';
+import Vehicles from './Vehicles';
+import Home from './Home';
 
-class Register extends Component {
+class Dashboard extends Component {
     static navigationOptions = {
-        header : null
+        title : 'GEFE',
+        headerLeft : null,
     };
     render(){
         return(
-            <View style={styles.container}>
-                <Text style={styles.titleFont}>Make an Account</Text>
-                <Image style={styles.imgsplash} source={require('../assets/register.png')}></Image>
-                <TextInput style={styles.inputUser}>Username</TextInput>
-                <TextInput style={styles.inputUser}>Password</TextInput>
-                <TextInput style={styles.inputUser}>Confirm Password</TextInput>
-                <Button onPress={() => this.props.navigation.navigate('Dashboard')} title="Register" color="#6C63FF"></Button>
-                <Text style={styles.buttonLogin} onPress={() => this.props.navigation.navigate('Login')}>Already have an account? Login</Text>
-            </View>
+            <MyApp />
         )
     }
 }
 
-export default Register;
+const MyDrawerNavigator = createDrawerNavigator({
+    Home: {
+      screen: Home,
+    },
+    Users: {
+      screen: Users,
+    },
+    Vehicles: {
+      screen: Vehicles,
+    },
+});
+const MyApp = createAppContainer(MyDrawerNavigator);
+
+export default Dashboard;
 
 const styles = StyleSheet.create({
     container:{
