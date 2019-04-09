@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
-import {Button,Image, View, Text, StyleSheet} from 'react-native'
-import { TextInput } from 'react-native-gesture-handler';
+import {Image, View, StyleSheet, ScrollView} from 'react-native'
+import { Container, Content, List, ListItem, Text, Left, Right} from 'native-base';
 
 
 class MyAccount extends Component {
     render(){
         return(
-            <View style={styles.mainBody}>
-                <View style={styles.container}>
+            <ScrollView style={styles.mainBody}>
                     <View>
                         <Text style={styles.titleFont}>MyAccount</Text>
                     </View>
@@ -18,8 +17,48 @@ class MyAccount extends Component {
                             <Text style={styles.titleUserjob}>Developer / Mahasiswa</Text>
                         </View>
                     </View>
-                </View>
-            </View>
+                    <View>
+                        <Container>
+                            <Content>
+                                <List>
+                                    <ListItem>
+                                        <Left>
+                                            <Image source={require('../assets/profile.png')} 
+                                            style={{width:24,height:24}}/>
+                                            <Text style={styles.titleIcon}>Profile</Text>
+                                        </Left>
+                                        <Right>
+                                            <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                        </Right>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Left>
+                                            <Image source={require('../assets/fingerprint.png')} 
+                                            style={{width:24,height:24}}/>
+                                            <Text style={styles.titleIcon}>FingerPrint</Text>
+                                        </Left>
+                                        <Right>
+                                            <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                        </Right>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Left>
+                                            <Image source={require('../assets/password.png')} 
+                                            style={{width:24,height:24}}/>
+                                            <Text style={styles.titleIcon}>Password</Text>
+                                        </Left>
+                                        <Right>
+                                            <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                        </Right>
+                                    </ListItem>
+                                </List>
+                            </Content>
+                        </Container>
+                    </View>
+            </ScrollView>
         )
     }
 }
@@ -28,6 +67,7 @@ export default MyAccount;
 
 const styles = StyleSheet.create({
     mainBody:{
+        flex:1,
         marginTop:20,
     },
     container:{
@@ -79,5 +119,8 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         marginTop:8,
         marginStart:16
+    },
+    titleIcon:{
+        marginStart:8,
     }
 });

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native'
-import { Container, Header, Content, List, ListItem, Text} from 'native-base';
+import {View,Image, StyleSheet} from 'react-native'
+import { Container, Header, Content, List, ListItem, Text,Left, Right} from 'native-base';
 import { ScrollView } from 'react-native-gesture-handler';
 
 
@@ -12,17 +12,60 @@ class Users extends Component {
                 <Container style={styles.container}>
                     <Content>
                         <List>
-                            <ListItem noIndent style={{ backgroundColor: "#C9C7FF" }}>
-                                <Text>Cevin</Text>
+                            <ListItem>
+                                <Left>
+                                    <Image source={require('../assets/profile.png')} 
+                                    style={{width:24,height:24}}/>
+                                    <Text style={styles.titleIcon}>Fariha</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                        style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                             <ListItem>
-                                <Text>Fariha</Text>
+                                <Left>
+                                    <Image source={require('../assets/profile.png')} 
+                                    style={{width:24,height:24}}/>
+                                    <Text style={styles.titleIcon}>Bekti</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                        style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                             <ListItem>
-                                <Text>Anita</Text>
+                                <Left>
+                                    <Image source={require('../assets/profile.png')} 
+                                    style={{width:24,height:24}}/>
+                                    <Text style={styles.titleIcon}>Firda</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                        style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                             <ListItem>
-                                <Text>Bekti</Text>
+                                <Left>
+                                    <Image source={require('../assets/profile.png')} 
+                                    style={{width:24,height:24}}/>
+                                    <Text style={styles.titleIcon}>Dinda</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                        style={{width:18,height:18}}/>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Left>
+                                    <Image source={require('../assets/profile.png')} 
+                                    style={{width:24,height:24}}/>
+                                    <Text style={styles.titleIcon}>Anita</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                        style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                         </List>
                     </Content>
@@ -68,5 +111,8 @@ const styles = StyleSheet.create({
         borderColor: "#E0E0E0",
         backgroundColor: "#FAFAFA",
         borderRadius: 8,
+    },
+    titleIcon:{
+        marginStart:8,
     }
 });

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Button,Image, View, StyleSheet} from 'react-native'
-import { Container, Header, Content, List, ListItem, Text} from 'native-base';
+import {Image, StyleSheet} from 'react-native'
+import { Container, Content, List, ListItem, Text, Left, Right} from 'native-base';
 import { ScrollView } from 'react-native-gesture-handler';
 
 
@@ -12,17 +12,82 @@ class Vehicles extends Component {
                 <Container style={styles.container}>
                     <Content>
                         <List>
-                            <ListItem noIndent style={{ backgroundColor: "#C9C7FF" }}>
-                                <Text>Vario</Text>
+                            <ListItem>
+                                <Left>
+                                    <Image source={require('../assets/motor.png')} 
+                                        style={{width:30,height:30}}/>
+                                    <Text style={styles.imgIcon}>Vario</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                             <ListItem>
-                                <Text>Beat</Text>
+                                <Left>
+                                    <Image source={require('../assets/motor.png')} 
+                                                style={{width:30,height:30}}/>
+                                    <Text style={styles.imgIcon}>Beat</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                             <ListItem>
-                                <Text>Mio</Text>
+                                <Left>
+                                    <Image source={require('../assets/motor.png')} 
+                                            style={{width:30,height:30}}/>
+                                    <Text style={styles.imgIcon}>Mio</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                             <ListItem>
-                                <Text>Shogun</Text>
+                                <Left>
+                                    <Image source={require('../assets/motor.png')} 
+                                            style={{width:30,height:30}}/>
+                                    <Text style={styles.imgIcon}>Shogun</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Left>
+                                    <Image source={require('../assets/car.png')} 
+                                            style={{width:30,height:30}}/>
+                                    <Text style={styles.imgIcon}>Xenia</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Left>
+                                    <Image source={require('../assets/car.png')} 
+                                            style={{width:30,height:30}}/>
+                                    <Text style={styles.imgIcon}>Innova</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                </Right>
+                            </ListItem>
+                            <ListItem>
+                                <Left>
+                                    <Image source={require('../assets/car.png')} 
+                                            style={{width:30,height:30}}/>
+                                    <Text style={styles.imgIcon}>Wuling</Text>
+                                </Left>
+                                <Right>
+                                    <Image source={require('../assets/arrow.png')} 
+                                            style={{width:18,height:18}}/>
+                                </Right>
                             </ListItem>
                         </List>
                     </Content>
@@ -68,5 +133,8 @@ const styles = StyleSheet.create({
         borderColor: "#E0E0E0",
         backgroundColor: "#FAFAFA",
         borderRadius: 8,
+    },
+    imgIcon:{
+        marginStart:8,
     }
 });
