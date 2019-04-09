@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Button,Image, View, Text, StyleSheet} from 'react-native'
-import { TextInput } from 'react-native-gesture-handler';
+import {Image} from 'react-native'
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 
 import Users from './Users';

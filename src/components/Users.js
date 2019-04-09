@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {View,Image, StyleSheet} from 'react-native'
-import { Container, Header, Content, List, ListItem, Text,Left, Right} from 'native-base';
+import {Image, StyleSheet} from 'react-native'
+import { Container, Content, List, ListItem, Text,Left, Right} from 'native-base';
 import { ScrollView } from 'react-native-gesture-handler';
 
 
